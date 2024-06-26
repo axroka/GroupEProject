@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 class UserInfo {
@@ -18,7 +19,9 @@ class UserInfo {
             } else {
 
                 System.out.println("What type of vehicle would you like to rent?");
-                String vehicle = scanner.nextLine();
+                String vehicle = scanner.nextLine().toLowerCase();
+
+
 
                 System.out.println("How many days are you planning to rent this vehicle?");
                 double time = Double.parseDouble(scanner.nextLine());
