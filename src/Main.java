@@ -17,6 +17,15 @@ public class Main {
             case "suv":
                 vehicle = String.valueOf(new SUV("Toyota", "RAV4", "2023"));
                 break;
+
+            case "Truck":
+                vehicle = String.valueOf(new SUV("Toyota", "Tacoma", "2023"));
+                break;
+
+            case "Minivan":
+                vehicle = String.valueOf(new SUV("Toyota", "Sienna", "2023"));
+                break;
+                
             default:
                 System.out.println("Sorry we do not have that vehicle. Please choose SUV,Sedan,Truck,or Minivan");
                 scanner.close();
