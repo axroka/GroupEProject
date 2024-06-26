@@ -1,6 +1,6 @@
 # IS 247 Project
 
-Toyota Rental Company
+Toyota Rental Store
 
 Dongthi Nguyen: Leader and Coder
 
