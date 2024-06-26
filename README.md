@@ -3,13 +3,13 @@
 
 **Team memebers:** // Put roles next to names //
 
-Dongthi Nguyen: 
+Dongthi Nguyen: Leader and Coder
 
-Aakriti Roka:
+Aakriti Roka: Github repository management and Coder
 
-Jennifer Ma: 
+Jennifer Ma: Coder
 
-Jazmin Miranda: 
+Jazmin Miranda: Java Doc management
 
 Daniel Taheri: 
 
