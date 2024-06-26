@@ -16,8 +16,6 @@ class UserInfo {
                 System.out.println("Sorry you must be at least 18 years old to rent a vehicle");
 
             } else {
-                System.out.println("Please present your ID");
-
 
                 System.out.println("What type of vehicle would you like to rent?");
                 String vehicle = scanner.nextLine();
