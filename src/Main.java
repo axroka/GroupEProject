@@ -10,16 +10,16 @@ public class Main {
         try {
         switch (userInfo.getVehicleType()) {
             case "sedan":
-                selectedVehicle = new Sedan("Toyota", "Corolla", 2023);)
+                selectedVehicle = new Sedan("Toyota", "Corolla", 2023);
                 break;
             case "suv":
-                selectedVehicle = new SUV("Toyota", "RAV4", 2023))
+                selectedVehicle = new SUV("Toyota", "RAV4", 2023);
                 break;
             case "Truck":
-                selectedVehicle = new SUV("Toyota", "Tacoma", 2023))
+                selectedVehicle = new SUV("Toyota", "Tacoma", 2023);
                 break;
                 case "Minivan":
-                selectedVehicle = new SUV("Toyota", "Sienna", 2023))
+                selectedVehicle = new SUV("Toyota", "Sienna", 2023);
                     break;
 
             default:
