@@ -15,26 +15,24 @@ class UserInfo {
         System.out.println("How old are you?");
         age = Integer.parseInt(scanner.nextLine());
 
-        if (age < 18) {
-            System.out.println("Sorry you must be at least 18 years old to rent a vehicle");
+        if (age < 25) {
+            System.out.println("Sorry you must be at least 25 years old to rent a vehicle");
             scanner.close();
             return false;
         }
-        System.out.println("Do you have a driver license(yes/no)");
-        String License = scanner.nextLine().toLowerCase();
-        if(License.equals("yes")){
-            System.out.println("Do you have insurance(yes/no)");
-            String Insurance = scanner.nextLine().toLowerCase();
-            if(License.equals("yes") && Insurance.equals("yes")){
-                System.out.println("What type of vehicle would you like to rent?");
-                vehicleType = scanner.nextLine().toLowerCase();
-            } else{
-                System.out.println("Sorry you are intelligible to rent out a vehicle please have a nice day");
-                scanner.close();
-                return false;
-            }
-        }
+        System.out.println("Do you have a driver license(yes/no)?");
+        String license = scanner.nextLine().toLowerCase();
 
+        boolean LicenseAndInsurance = license.equals("yes") ? Insurance(scanner) : false;
+
+
+        if (!LicenseAndInsurance){
+            System.out.println("Sorry you are ineligible to rent a vehicle. Please have a nice day!");
+            scanner.close();
+            return false;
+        }
+        System.out.println("What vehicle would you like to rent out");
+        vehicleType = scanner.nextLine().toLowerCase();
 
         rentalDays = getRentalDays(scanner);
         System.out.println("Name: " + name);
@@ -43,6 +41,11 @@ class UserInfo {
         System.out.println("Days: " + rentalDays);
         scanner.close();
         return true;
+    }
+    private boolean Insurance(Scanner scanner){
+        System.out.println("Do you have insurance (yes/no)");
+        String insurance = scanner.nextLine().toLowerCase();
+        return insurance.equals("yes");
     }
     private int getRentalDays(Scanner scanner) {
         System.out.println("How many days are you planning to rent this vehicle?");

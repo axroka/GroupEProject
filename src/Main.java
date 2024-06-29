@@ -31,7 +31,7 @@ public class Main {
             return;
             }
             double cost = RentalCost.calculateRentalCost(selectedVehicle, userInfo.getRentalDays());
-        System.out.println("Your" + selectedVehicle + "rental will cost : $" + cost);
+        System.out.println("Your " + selectedVehicle + " rental will cost : $" + cost);
 
     }
 }
