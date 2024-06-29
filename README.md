@@ -2,7 +2,7 @@
 
 Toyota Rental Store
 
-Dongthi Nguyen: Leader and Coder
+Dongthi (DT) Nguyen: Leader and Coder
 
 Aakriti Roka: Github repository management and Coder
 
