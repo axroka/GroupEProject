@@ -9,19 +9,25 @@ class UserInfo {
     public boolean getUserInfo() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("What is your name?");
+        System.out.print("What is your name: ");
         name = scanner.nextLine();
+        System.out.println("----------------------------------------");
 
-        System.out.println("How old are you?");
+
+        System.out.print("How old are you: ");
         age = Integer.parseInt(scanner.nextLine());
+        System.out.println("----------------------------------------");
+
 
         if (age < 25) {
             System.out.println("Sorry you must be at least 25 years old to rent a vehicle");
             scanner.close();
             return false;
         }
-        System.out.println("Do you have a driver license(yes/no)?");
+        System.out.print("Do you have a driver license(yes/no): ");
         String license = scanner.nextLine().toLowerCase();
+        System.out.println("----------------------------------------");
+
 
         boolean LicenseAndInsurance = license.equals("yes") ? Insurance(scanner) : false;
 
@@ -31,8 +37,10 @@ class UserInfo {
             scanner.close();
             return false;
         }
-        System.out.println("What vehicle would you like to rent out");
+        System.out.print("What vehicle would you like to rent out: ");
         vehicleType = scanner.nextLine().toLowerCase();
+        System.out.println("----------------------------------------");
+
 
         rentalDays = getRentalDays(scanner);
         System.out.println("Name: " + name);
@@ -43,13 +51,16 @@ class UserInfo {
         return true;
     }
     private boolean Insurance(Scanner scanner){
-        System.out.println("Do you have insurance (yes/no)");
+        System.out.print("Do you have insurance (yes/no)");
         String insurance = scanner.nextLine().toLowerCase();
+        System.out.println("----------------------------------------");
         return insurance.equals("yes");
     }
     private int getRentalDays(Scanner scanner) {
-        System.out.println("How many days are you planning to rent this vehicle?");
+        System.out.print("Enter the number of days you're planning to rent this vehicle: ");
         int days = Integer.parseInt(scanner.nextLine());
+        System.out.println("----------------------------------------");
+
 
         if (days < 0) {
             System.out.println("Invalid input");
