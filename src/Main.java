@@ -16,10 +16,10 @@ public class Main {
                 selectedVehicle = new SUV("Toyota", "RAV4", 2023);
                 break;
             case "Truck":
-                selectedVehicle = new SUV("Toyota", "Tacoma", 2023);
+                selectedVehicle = new Truck("Toyota", "Tacoma", 2023);
                 break;
                 case "Minivan":
-                selectedVehicle = new SUV("Toyota", "Sienna", 2023);
+                selectedVehicle = new Minivan("Toyota", "Sienna", 2023);
                     break;
 
             default:
