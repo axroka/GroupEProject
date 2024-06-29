@@ -20,8 +20,21 @@ class UserInfo {
             scanner.close();
             return false;
         }
-        System.out.println("What type of vehicle would you like to rent?");
-        vehicleType = scanner.nextLine().toLowerCase();
+        System.out.println("Do you have a driver license(yes/no)");
+        String License = scanner.nextLine().toLowerCase();
+        if(License.equals("yes")){
+            System.out.println("Do you have insurance(yes/no)");
+            String Insurance = scanner.nextLine().toLowerCase();
+            if(License.equals("yes") && Insurance.equals("yes")){
+                System.out.println("What type of vehicle would you like to rent?");
+                vehicleType = scanner.nextLine().toLowerCase();
+            } else{
+                System.out.println("Sorry you are intelligible to rent out a vehicle please have a nice day");
+                scanner.close();
+                return false;
+            }
+        }
+
 
         rentalDays = getRentalDays(scanner);
         System.out.println("Name: " + name);
