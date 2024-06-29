@@ -1,30 +1,36 @@
 //Parent code
 
-class vehicle{
-    private String make;
-    private String model;
-    private int year;
-    public vehicle(String make, String model, int year ) {
+abstract class Vehicle implements Rentable {
+     private String make;
+     private String model;
+     private int year;
 
-        this.make = make;
-        this.model = model;
-        this.year = year;
-    }
-    public String getMake() {
+     public Vehicle(String make, String model, int year) {
+         this.make = make;
+         this.model = model;
+         this.year = year;
+     }
 
-        return make;
-    }
-    public String getModel() {
+     public String getMake() {
 
-        return model;
-    }
-    public int getYear() {
+         return make;
+     }
 
-        return year;
-    }
-    public void displayDetails() {
-        System.out.println("Make: " +  make);
-        System.out.println("Model:" + model);
-        System.out.println("Year:" + year);
-    }
+     public String getModel() {
+
+         return model;
+     }
+
+     public int getYear() {
+
+         return year;
+     }
+     @Override
+     public abstract double getDailyRate();
+
+     public String toString() {
+         return make + " " + model + " " + year;
+     }
 }
+
+
