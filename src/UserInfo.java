@@ -37,6 +37,14 @@ class UserInfo {
             scanner.close();
             return false;
         }
+
+        ArrayList<String> cars = new ArrayList<String>();
+        cars.add("Suv");
+        cars.add("Sedan");
+        cars.add("Truck");
+        cars.add("Minivan");
+        System.out.println(cars);
+        
         System.out.print("What vehicle would you like to rent out: ");
         vehicleType = scanner.nextLine().toLowerCase();
         System.out.println("----------------------------------------");
