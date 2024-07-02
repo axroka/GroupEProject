@@ -5,5 +5,6 @@ class Truck extends Vehicle{
     @Override
     public double getDailyRate(){
         return 300.0;
+
     }
 }

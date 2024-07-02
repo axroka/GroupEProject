@@ -1,10 +1,11 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 class UserInfo {
     private String name;
     private int age;
     private String vehicleType;
-    private int rentalDays;
+    private boolean rentalDays;
 
     public boolean getUserInfo() {
         Scanner scanner = new Scanner(System.in);
@@ -64,7 +65,7 @@ class UserInfo {
         System.out.println("----------------------------------------");
         return insurance.equals("yes");
     }
-    private int getRentalDays(Scanner scanner) {
+    private boolean getRentalDays(Scanner scanner) {
         System.out.print("Enter the number of days you're planning to rent this vehicle: ");
         int days = Integer.parseInt(scanner.nextLine());
         System.out.println("----------------------------------------");
@@ -73,15 +74,13 @@ class UserInfo {
         if (days < 0) {
             System.out.println("Invalid input");
             return getRentalDays(scanner);
-        } else {
+        }
             return days;
         }
-    }
     public String getVehicleType(){
         return vehicleType;
     }
-
-    public int getRentalDays() {
+    public boolean isRentalDays() {
         return rentalDays;
     }
 }
