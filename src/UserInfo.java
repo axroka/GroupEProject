@@ -6,7 +6,6 @@ class UserInfo {
     private int age;
     private String vehicleType;
     private int rentalDays;
-    private int year;
 
     public boolean getUserInfo(Scanner scanner) {
 
@@ -55,10 +54,6 @@ class UserInfo {
         vehicleType = scanner.nextLine().toLowerCase();
         System.out.println("----------------------------------------");
 
-        System.out.print("Enter the year of the vehicle you want to rent: ");
-        year = Integer.parseInt(scanner.nextLine());
-        System.out.println("----------------------------------------");
-
         rentalDays = getRentalDays(scanner);
         System.out.println("Name: " + name);
         System.out.println("Age: " + age);
@@ -89,8 +84,5 @@ class UserInfo {
     }
     public int getRentalDays() {
         return rentalDays;
-    }
-    public int getYear(){
-        return year;
     }
 }
