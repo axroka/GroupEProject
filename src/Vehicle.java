@@ -1,6 +1,6 @@
 //Parent code
 
-abstract class Vehicle implements Rentable {
+abstract class Vehicle <T extends Vehicle<T>>implements Rentable<T> {
      private String make;
      private String model;
      private int year;

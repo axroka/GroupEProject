@@ -48,6 +48,7 @@ class UserInfo {
         cars.add("Minivan $40");
 
         System.out.println(cars);
+        System.out.println("----------------------------------------");
 
 
         System.out.print("What vehicle would you like to rent out: ");

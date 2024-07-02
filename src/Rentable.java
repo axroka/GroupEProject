@@ -1,3 +1,3 @@
-public interface Rentable {
+public interface Rentable<T extends Vehicle> {
     double getDailyRate();
 }

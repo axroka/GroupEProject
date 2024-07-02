@@ -1,4 +1,4 @@
-class SUV extends Vehicle {
+class SUV extends Vehicle<SUV> {
     public SUV(String make, String model, int year) {
         super(make, model, year);
     }
