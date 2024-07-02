@@ -9,24 +9,24 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         UserInfo userInfo = new UserInfo();
 
-        if (!userInfo.getUserInfo()) {
+        if (!userInfo.getUserInfo(scanner)) {
             scanner.close();
             return;
         }
         Vehicle selectedVehicle = null;
         try {
-            switch (userInfo.getVehicleType()) {
+            switch (userInfo.getVehicleType().toLowerCase()) {
                 case "sedan":
-                    selectedVehicle = new Sedan("Toyota", "Corolla", 2023);
+                    selectedVehicle = new Sedan("Toyota", "Corolla", userInfo.getYear());
                     break;
                 case "suv":
-                    selectedVehicle = new SUV("Toyota", "RAV4", 2023);
+                    selectedVehicle = new SUV("Toyota", "RAV4", userInfo.getYear());
                     break;
-                case "Truck":
-                    selectedVehicle = new Truck("Toyota", "Tacoma", 2023);
+                case "truck":
+                    selectedVehicle = new Truck("Toyota", "Tacoma", userInfo.getYear());
                     break;
-                case "Minivan":
-                    selectedVehicle = new Minivan("Toyota", "Sienna", 2023);
+                case "minivan":
+                    selectedVehicle = new Minivan("Toyota", "Sienna", userInfo.getYear());
                     break;
 
                 default:
@@ -34,18 +34,23 @@ public class Main {
             }
         } catch (IllegalAccessException e) {
             System.out.println(e.getMessage());
+            scanner.close();
             return;
         }
 
-        CarWash carWash = new CarWash();
-        boolean includeCarWash = carWash.askForCarWash(scanner);
+        CarWash carwash = new CarWash();
+        boolean includeCarWash = carwash.askForCarWash(scanner);
+
+        int rentalDays = userInfo.getRentalDays();
 
         if (includeCarWash) {
-            double costWithCarWash = RentalCost.calculateRentalCost(selectedVehicle, userInfo.isRentalDays(), true);
+            double costWithCarWash = RentalCost.calculateRentalCost(selectedVehicle, rentalDays, true);
             System.out.println("Your " + selectedVehicle + " rental with car wash will cost: $" + costWithCarWash);
         } else {
-            double costWithoutCarWash = RentalCost.calculateRentalCost(selectedVehicle, userInfo.isRentalDays());
+            double costWithoutCarWash = RentalCost.calculateRentalCost(selectedVehicle, rentalDays);
             System.out.println("Your " + selectedVehicle + " rental without car wash will cost: $" + costWithoutCarWash);
         }
+        System.out.println("Have a safe trip!");
+        scanner.close();
     }
 }

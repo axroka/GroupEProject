@@ -5,7 +5,7 @@ class Sedan extends Vehicle {
 
     @Override
     public double getDailyRate() {
-        return 100.0;
+        return 15.0;
     }
 }
 

@@ -4,6 +4,6 @@ class Minivan extends Vehicle {
     }
     @Override
     public double getDailyRate(){
-        return 400.0;
+        return 40.0;
     }
 }

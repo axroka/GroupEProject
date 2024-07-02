@@ -5,6 +5,6 @@ class SUV extends Vehicle {
 
     @Override
     public double getDailyRate() {
-        return 200.0;
+        return 20.0;
     }
 }
