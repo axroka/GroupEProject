@@ -84,5 +84,10 @@ class UserInfo {
     }
     public int getRentalDays() {
         return rentalDays;
+
+    }
+    @Override
+    public String toString(){
+        return "Name: " + name + " Age: " + age + " Vehicle: " + vehicleType + " Days: " + rentalDays;
     }
 }
