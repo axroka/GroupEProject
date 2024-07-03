@@ -1,22 +1,22 @@
-class UserAction {
+class Receipt {
     private String action;
-    private String detail;
+    private String info;
 
-    public UserAction(String action, String detail) {
+    public Receipt(String action, String detail) {
         this.action = action;
-        this.detail = detail;
+        this.info = detail;
     }
 
     public String getAction() {
         return action;
     }
 
-    public String getDetail() {
-        return detail;
+    public String getinfo() {
+        return info;
     }
 
     @Override
     public String toString() {
-        return action + ": " + detail;
+        return action + ": " + info;
     }
 }

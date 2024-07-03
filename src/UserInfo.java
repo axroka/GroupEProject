@@ -62,7 +62,7 @@ class UserInfo {
         return true;
     }
     private boolean Insurance(Scanner scanner){
-        System.out.print("Do you have insurance (yes/no)");
+        System.out.print("Do you have insurance (yes/no): ");
         String insurance = scanner.nextLine().toLowerCase();
         System.out.println("----------------------------------------");
         return insurance.equals("yes");
@@ -88,6 +88,6 @@ class UserInfo {
     }
     @Override
     public String toString(){
-        return "Name: " + name + " Age: " + age + " Vehicle: " + vehicleType + " Days: " + rentalDays;
+        return  vehicleType;
     }
 }
