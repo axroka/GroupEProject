@@ -6,7 +6,6 @@ class UserInfo {
     private int age;
     private String vehicleType;
     private int rentalDays;
-    private int year;
 
     public boolean getUserInfo(Scanner scanner) {
 
@@ -85,8 +84,10 @@ class UserInfo {
     }
     public int getRentalDays() {
         return rentalDays;
+
     }
-    public int getYear(){
-        return year;
+    @Override
+    public String toString(){
+        return "Name: " + name + " Age: " + age + " Vehicle: " + vehicleType + " Days: " + rentalDays;
     }
 }

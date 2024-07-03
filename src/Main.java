@@ -18,16 +18,16 @@ public class Main {
         try {
             switch (userInfo.getVehicleType().toLowerCase()) {
                 case "sedan":
-                    selectedVehicle = new Sedan("Toyota", "Corolla", 2024);
+                    selectedVehicle = new Sedan("Toyota", "Corolla", userInfo.getYear());
                     break;
                 case "suv":
-                    selectedVehicle = new SUV("Toyota", "RAV4", 2024);
+                    selectedVehicle = new SUV("Toyota", "RAV4", userInfo.getYear());
                     break;
                 case "truck":
-                    selectedVehicle = new Truck("Toyota", "Tacoma", 2024);
+                    selectedVehicle = new Truck("Toyota", "Tacoma", userInfo.getYear());
                     break;
                 case "minivan":
-                    selectedVehicle = new Minivan("Toyota", "Sienna", 2024);
+                    selectedVehicle = new Minivan("Toyota", "Sienna", userInfo.getYear());
                     break;
 
                 default:
