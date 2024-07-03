@@ -55,10 +55,6 @@ class UserInfo {
         vehicleType = scanner.nextLine().toLowerCase();
         System.out.println("----------------------------------------");
 
-        System.out.print("Enter the year of the vehicle you want to rent: ");
-        year = Integer.parseInt(scanner.nextLine());
-        System.out.println("----------------------------------------");
-
         rentalDays = getRentalDays(scanner);
         System.out.println("Name: " + name);
         System.out.println("Age: " + age);
