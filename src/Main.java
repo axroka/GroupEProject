@@ -1,7 +1,20 @@
 import java.util.Scanner;
 import java.util.*;
 
+/**
+ * The Main class for the Toyota Rental Store application.
+ * This class handles user input and vehicle rental processes.
+ *
+ * @author DT, Aakriti, and Jennifer
+ * Created on 06/24/2024
+ */
 public class Main {
+
+    /**
+     * The main method to run the Toyota Rental Store application.
+     *
+     * @param args Stores incoming command line arguments
+     */
     public static void main(String[] args) {
     Stack<Receipt> receipt = new Stack<>();
         System.out.println("Welcome to Toyota Rental Store");
@@ -10,7 +23,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         UserInfo userInfo = new UserInfo();
 
-        //Hashmap
+        // HashMap to store car rental rates
         HashMap<String ,Double> carRates = new HashMap<>();
         carRates.put("suv",20.0);
         carRates.put("sedan", 15.0);

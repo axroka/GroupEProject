@@ -1,12 +1,41 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * UserInfo class is for storing user information and handling user interactions.
+ * This class provides methods to collect and validate user information for vehicle rental.
+ *
+ * @author DT, Aakriti, Daniel, and Jennifer
+ * Created on 06/24/2024
+ */
 class UserInfo {
+
+    /**
+     * The name of the user.
+     */
     private String name;
+
+    /**
+     * The age of the user.
+     */
     private int age;
+
+    /**
+     * The type of vehicle the user wants to rent.
+     */
     private String vehicleType;
+
+    /**
+     * The number of days the user wants to rent the vehicle.
+     */
     private int rentalDays;
 
+    /**
+     * Collects user information through a series of prompts.
+     *
+     * @param scanner The Scanner object for reading user input.
+     * @return true if the user is eligible to rent a vehicle, false otherwise.
+     */
     public boolean getUserInfo(Scanner scanner) {
 
         System.out.print("What is your name: ");
@@ -61,12 +90,26 @@ class UserInfo {
         System.out.println("Days: " + rentalDays);
         return true;
     }
+
+    /**
+     * Checks if the user has insurance.
+     *
+     * @param scanner The Scanner object for reading user input.
+     * @return true if the user has insurance, false otherwise.
+     */
     private boolean Insurance(Scanner scanner){
         System.out.print("Do you have insurance (yes/no): ");
         String insurance = scanner.nextLine().toLowerCase();
         System.out.println("----------------------------------------");
         return insurance.equals("yes");
     }
+
+    /**
+     * Prompts the user to enter the number of rental days and validates the input.
+     *
+     * @param scanner The Scanner object for reading user input.
+     * @return The number of rental days.
+     */
     private int getRentalDays(Scanner scanner) {
         System.out.print("Enter the number of days you're planning to rent this vehicle: ");
         int days = Integer.parseInt(scanner.nextLine());
@@ -79,13 +122,31 @@ class UserInfo {
         }
             return days;
         }
-    public String getVehicleType(){
+
+    /**
+     * Gets the type of vehicle the user wants to rent.
+     *
+     * @return The type of vehicle.
+     */
+        public String getVehicleType(){
         return vehicleType;
     }
+
+    /**
+     * Gets the number of rental days.
+     *
+     * @return The number of rental days.
+     */
     public int getRentalDays() {
         return rentalDays;
 
     }
+
+    /**
+     * Returns a string representation of the user's selected vehicle type.
+     *
+     * @return The type of vehicle.
+     */
     @Override
     public String toString(){
         return  vehicleType;
